@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Script that configures an Ubuntu server with custom IP for localhost and facebook.com
+
+# Make a backup of the original hosts file
+cp /etc/hosts ~/hosts.new
+
+# Replace or add the IP mappings in the new file
+sed -i 's/127.0.0.1 localhost/127.0.0.2 localhost/g' ~/hosts.new
+# Check if facebook.com entry exists and add or modify it
+if grep -q "facebook.com" ~/hosts.new; then
+    sed -i 's/.*facebook.com/8.8.8.8 facebook.com/g' ~/hosts.new
+else
+    echo "8.8.8.8 facebook.com" >> ~/hosts.new
+fi
+
+# Copy the modified file back to /etc/hosts
+cp -f ~/hosts.new /etc/hosts
