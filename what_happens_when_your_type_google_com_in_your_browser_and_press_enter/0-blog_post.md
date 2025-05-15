@@ -6,7 +6,7 @@ The Big Picture
 Before we examine each component in detail, let's visualize the complete flow of what happens when you type https://www.google.com and press Enter:
 
 
-![alt text](image.png)
+![alt text](1-what_happen_when_diagram.png)
 
 
 
