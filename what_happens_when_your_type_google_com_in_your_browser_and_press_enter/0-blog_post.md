@@ -1,5 +1,26 @@
+Link to the blog post:https://www.linkedin.com/article/edit/7328699699077537792/
+
 What Happens When You Type google.com in Your Browser and Press Enter?
 Have you ever wondered about the complex dance of technologies that occurs in the fraction of a second between typing "https://www.google.com" and seeing Google's familiar search page? This seemingly simple action triggers an intricate series of steps involving multiple layers of the internet stack. Let's dive deep into this fascinating journey.
+The Big Picture
+Before we examine each component in detail, let's visualize the complete flow of what happens when you type https://www.google.com and press Enter:
+
+
+![alt text](image.png)
+
+
+
+
+The diagram above illustrates the complete journey of your request:
+
+DNS resolution to find Google's IP address
+Request traveling through firewalls with HTTPS encryption (port 443)
+Load balancer distributing traffic
+Web server processing the request
+Application server generating dynamic content
+Database queries for personalized data
+The response traveling back through the same infrastructure
+
 The Journey Begins: DNS Request
 When you hit Enter, your browser first needs to figure out where google.com actually lives on the internet. Computers communicate using IP addresses (like 142.250.185.78), not human-friendly domain names. This is where the Domain Name System (DNS) comes in - it's like the internet's phonebook.
 Here's what happens:
